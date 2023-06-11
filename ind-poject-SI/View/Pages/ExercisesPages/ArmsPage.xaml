@@ -1,0 +1,138 @@
+﻿<Page x:Class="ind_poject_SI.View.Pages.ExercisesPages.ArmsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ind_poject_SI.View.Pages.ExercisesPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="ArmsPage">
+    <Border>
+        <Grid>
+            <Image Source="/Images/Background.jpg"
+               Stretch="UniformToFill"/>
+            <Border Background="White" Opacity="0.5">
+            </Border>
+            <StackPanel Margin="0 10 10 0" Orientation="Vertical" HorizontalAlignment="Right">
+                <TextBlock Text="Упражнение" Style="{StaticResource ExTxt}"></TextBlock>
+                <Button
+                    x:Name="BarelLift"
+                    Click="BenchH_Click"
+                    Margin="0 20 0 0"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Подъем штанги" FontSize="25" Style="{StaticResource MText}" Width="219" Height="32"/>
+                </Button>
+                <Button
+                    x:Name="Hammers"
+                    Click="BenchSl_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Молотки" FontSize="25" Style="{StaticResource MText}" Width="216" Height="32"/>
+                </Button>
+                <Button
+                    x:Name="FrenchBench"
+                    Click="BenchD_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Французкий жим" FontSize="23" Style="{StaticResource MText}" Width="222" Height="35"/>
+                </Button>
+                <Button
+                    x:Name="Push_ups"
+                    Click="Push_ups_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Отжимания на брусьях" FontSize="19.9" Style="{StaticResource MText}" Width="243" Height="28"/>
+                </Button>
+                <Button
+                    x:Name="Scott"
+                    Click="Hamer_Click"
+                    Style="{StaticResource BtnBreast}" Cursor="Hand">
+                    <TextBlock Text="Подъемы Скотта" FontSize="22" Style="{StaticResource MText}" Width="222" Height="27"/>
+                </Button>
+                <Button
+                    Margin="0 20 0 0"
+                    Width="150"
+                    x:Name="Hide"
+                    Click="Hide_Click"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Скрыть" FontSize="25" Style="{StaticResource MText}" Width="222" Height="27"/>
+                </Button>
+            </StackPanel>
+            <Button 
+                x:Name="Back"
+                Click="Back_Click"
+                Style="{StaticResource BtnEx}"
+                Width="150"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="10 0 0 20" Cursor="Hand">
+                <TextBlock Text="Назад" FontSize="25" Style="{StaticResource MText}"/>
+            </Button>
+            <Border x:Name="BarelL" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/BarelL.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 25 0 0" Text="Возьмите снаряд в руки. Встаньте прямо, ноги на ширине плеч.
+На выдохе согните руки в локтевом суставе за счет усилий бицепсов, стараясь не шевелить спиной и не выводить руки вперед.
+В верхней фазе амплитуды задержитесь на 1-2 секунды. При этом максимально напрягите бицепс." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="Ham" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/HamerArms.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 10 0 0" Text="“Молотки” – упражнение, выполняющееся так раз нейтральным хватом. Чаще всего его делают с гантелями – техника полностью копирует обычные подъемы гантелей, отличается только хват. Выполнять можно как стоя, так и сидя." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="FrenchB" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/French.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Выпрямите руки с грифом над грудью. Затем отведите их, не сгибая, в сторону головы примерно до уровня в 45 градусов. Это исходная позиция.
+Медленно опустите снаряд за голову, сгибая руки. Локти зафиксируйте в одной позиции и не разводите их в стороны. В нижней точке угол в локтевом суставе должен быть 90 градусов." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="Push" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/PushArms.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Корпус должен располагаться строго перпендикулярно полу. Опуститесь вниз, сгибая руки. Локти при этом отводите не в стороны, а назад. Амплитуда – максимально комфортная, но не больше прямого угла в локтевом суставе." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="Scot" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/Scott.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Вы плотно упираетесь в тренажер грудью и трицепсом, а во время подъема не стоит отрывать от него руки. Благодаря такой конструкции здесь работает только бицепс." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Page>

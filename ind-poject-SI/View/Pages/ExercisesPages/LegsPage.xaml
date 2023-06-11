@@ -1,0 +1,135 @@
+﻿<Page x:Class="ind_poject_SI.View.Pages.ExercisesPages.LegsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ind_poject_SI.View.Pages.ExercisesPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="LegsPage">
+    <Border>
+        <Grid>
+            <Image Source="/Images/Background.jpg"
+               Stretch="UniformToFill"/>
+            <Border Background="White" Opacity="0.5">
+            </Border>
+            <StackPanel Margin="0 10 10 0" Orientation="Vertical" HorizontalAlignment="Right">
+                <TextBlock Text="Упражнение" Style="{StaticResource ExTxt}"></TextBlock>
+                <Button
+                    x:Name="Squats"
+                    Click="BenchH_Click"
+                    Margin="0 20 0 0"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Приседания" FontSize="25" Style="{StaticResource MText}" Width="219" Height="32"/>
+                </Button>
+                <Button
+                    x:Name="Lunges"
+                    Click="BenchSl_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Выпады" FontSize="25" Style="{StaticResource MText}" Width="216" Height="32"/>
+                </Button>
+                <Button
+                    x:Name="LegPress"
+                    Click="BenchD_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Жим сидя" FontSize="25" Style="{StaticResource MText}" Width="222" Height="35"/>
+                </Button>
+                <Button
+                    x:Name="RomanianDeadlift"
+                    Click="Push_ups_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Румынская тяга" FontSize="23" Style="{StaticResource MText}" Width="243" Height="28"/>
+                </Button>
+                <Button
+                    x:Name="Hyperextension"
+                    Click="Hamer_Click"
+                    Style="{StaticResource BtnBreast}" Cursor="Hand">
+                    <TextBlock Text="Гиперэкстензия" FontSize="23" Style="{StaticResource MText}" Width="222" Height="27"/>
+                </Button>
+                <Button
+                    Margin="0 20 0 0"
+                    Width="150"
+                    x:Name="Hide"
+                    Click="Hide_Click"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Скрыть" FontSize="25" Style="{StaticResource MText}" Width="222" Height="27"/>
+                </Button>
+            </StackPanel>
+            <Button 
+                x:Name="Back"
+                Click="Back_Click"
+                Style="{StaticResource BtnEx}"
+                Width="150"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="10 0 0 20" Cursor="Hand">
+                <TextBlock Text="Назад" FontSize="25" Style="{StaticResource MText}"/>
+            </Button>
+            <Border x:Name="squats" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/squats.png"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 25 0 0" Text="Встать прямо, слегка согнуть ноги в коленных суставах, стопы поставить на ширину плеч . Опуститесь до угла в коленных суставах 90° , не отрывая пяток от пола, и вернитесь в исходное положение , одновременно разгибая коленный сустав и корпус ." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="lunges" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/lunges.png"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 10 0 0" Text="Удерживая корпус вертикально и сохраняя естественный прогиб в пояснице, широко шагнуть вперед . Перенести свой вес на среднюю часть стопы спереди стоящей ноги и опуститься вниз до угла в коленных суставах 90° . Колено сзади стоящей ноги должно быть в нескольких сантиметрах от пола. Вернуться в исходное положение, опираясь на впереди стоящую ногу ." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="LegP" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/Legp.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Упираясь ногами в платформу, вытолкнуть ее вверх, не разгибая ноги полностью. Затем медленно опустить ноги вниз, пока голень и бедро не образуют угол 90°. Поясница должна оставаться прижатой к скамье тренажера." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="Deadlift" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/Deadlift.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Поставить стопы на ширине тазобедренного сустава или на ширине плеч так, чтобы стопы были под грифом. Из исходного положения, слегка согнув ноги в коленном суставе, начинать медленно наклоняться вперед, отводя таз назад и опуская снаряд точно вниз как можно ближе к ногам до середины голени . Спина прямая, лопатки приведены, грудью тянуться вверх, пресс остается в напряжении. За счет мышц бедер и ягодиц поднять корпус вверх в исходное положение ." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="hyperextension" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/Hyperextension.jpg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Лечь животом на скамью, зафиксировав голени под валиком. Наклониться вниз, руки скрещены на груди, спина прямая .Медленно поднимать корпус, до положения прямой линии с ногами. Зафиксироваться на 1-2 секунды. Вернуться в исходное положение." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Page>

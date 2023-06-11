@@ -1,0 +1,132 @@
+﻿<Page x:Class="ind_poject_SI.View.Pages.TimerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="TimerPage">
+    <Border>
+        <Grid>
+            <Image Source="/Images/Background.jpg"
+               Stretch="UniformToFill"/>
+            <Border Background="White" Opacity="0.5">
+            </Border>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <Button 
+                    BorderThickness="2"
+                    Margin="0 0 0 50"
+                    Foreground="Black"
+                    FontSize="22"
+                    Width="180"
+                    Height="50"
+                    Background="Transparent"
+                    x:Name="BtnBack"
+                    Click="BtnBack_Click" 
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+                    ToolTip="MaterialDesignOutlinedButton">
+                    <TextBlock Text="Главное меню"></TextBlock>
+                </Button>
+            </StackPanel>
+            <StackPanel Margin="50 0 0 0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="160" Width="350">
+                <Button
+                    Width="70"
+                    Height="70"
+                    Margin="50 0 0 0"
+                    x:Name="BtnStart"
+                    Click="BtnStart_Click"
+                    Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Foreground="Black">
+                    <materialDesign:PackIcon
+                        Width="60"
+                    Height="45"
+                    Kind="Play" />
+                </Button>
+                <Button
+                    Width="70"
+                    Height="70"
+                    Margin="30 0 0 0"
+                    x:Name="BtnStop"
+                    Click="BtnStop_Click"
+                    Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton"
+                    Foreground="Black">
+                    <materialDesign:PackIcon
+                    Kind="Stop"
+                    Width="45"
+                    Height="48"/>
+                </Button>
+                <Button
+                    Width="70"
+                    Height="70"
+                    Margin="30 0 0 0"
+                    x:Name="BtnReset"
+                    Click="BtnReset_Click"
+                    Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignIconButton}"
+                    ToolTip="MaterialDesignIconButton">
+                    <materialDesign:PackIcon
+                    Kind="EncryptionReset" 
+                        Width="45"
+                    Height="48"
+                        Foreground="Black"/>
+                </Button>
+            </StackPanel>
+            <Border BorderBrush="Black" CornerRadius="15" BorderThickness="3" Width="350" Height="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50 60 0 0">
+                <Grid>
+                    <Border Background="White" Opacity="0.7" CornerRadius="15">
+
+                    </Border>
+                    <TextBlock x:Name="tbTime" 
+                           Style="{StaticResource TimerTxt}"
+                           Text="00:00:00"/>
+                </Grid>
+            </Border>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Height="300" Width="200" Margin="70">
+                <Button 
+                    FontSize="22"
+                    BorderThickness="2"
+                    Height="50"
+                    Foreground="Black"
+                    x:Name="M1"
+                    Click="M1_Click"                     
+                    Content="1 минута"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+                    ToolTip="MaterialDesignOutlinedButton" />
+                <Button
+                    Height="50"
+                    FontSize="22"
+                    BorderThickness="2"
+                    Foreground="Black"
+                    Margin="0 20 0 0"
+                    x:Name="M3"
+                    Click="M3_Click"
+                    Content="3 минуты"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+                    ToolTip="MaterialDesignOutlinedButton" />
+                <Button
+                    Height="50"
+                    FontSize="22"
+                    BorderThickness="2"
+                    Foreground="Black"
+                    Margin="0 20 0 0"
+                    x:Name="M4"
+                    Click="M4_Click"
+                    Content="4 минуты"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignOutlinedDarkButton}"
+                    ToolTip="MaterialDesignOutlinedButton" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Page>

@@ -1,0 +1,136 @@
+﻿<Page x:Class="ind_poject_SI.View.Pages.ExercisesPages.BreastPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ind_poject_SI.View.Pages.ExercisesPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="BreastPage">
+    <Border>
+        <Grid>
+            <Image Source="/Images/Background.jpg"
+               Stretch="UniformToFill"/>
+            <Border Background="White" Opacity="0.5">
+            </Border>
+            <StackPanel Margin="0 10 10 0" Orientation="Vertical" HorizontalAlignment="Right">
+                <TextBlock Text="Упражнение" Style="{StaticResource ExTxt}"></TextBlock>
+                <Button
+                    x:Name="BenchH"
+                    Click="BenchH_Click"
+                    Margin="0 20 0 0"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Жим штанги лежа" FontSize="25" Style="{StaticResource MText}" Width="219" Height="32"/>
+                </Button>
+                <Button
+                    x:Name="BenchSl"
+                    Click="BenchSl_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Жим в наклоне" FontSize="25" Style="{StaticResource MText}" Width="216" Height="32"/>
+                </Button>
+                <Button
+                    x:Name="BenchD"
+                    Click="BenchD_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Жим гантелей лежа" FontSize="23" Style="{StaticResource MText}" Width="222" Height="35"/>
+                </Button>
+                <Button
+                    x:Name="Push_ups"
+                    Click="Push_ups_Click"
+                    Style="{StaticResource BtnBreast}">
+                    <TextBlock Text="Отжимания на брусьях" FontSize="19.9" Style="{StaticResource MText}" Width="243" Height="28"/>
+                </Button>
+                <Button
+                    x:Name="Hamer"
+                    Click="Hamer_Click"
+                    Style="{StaticResource BtnBreast}" Cursor="Hand">
+                    <TextBlock Text="Жим сидя в Хаммерe" FontSize="22" Style="{StaticResource MText}" Width="222" Height="27"/>
+                </Button>
+                <Button
+                    Margin="0 20 0 0"
+                    Width="150"
+                    x:Name="Hide"
+                    Click="Hide_Click"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Скрыть" FontSize="25" Style="{StaticResource MText}" Width="222" Height="27"/>
+                </Button>
+            </StackPanel>
+            <Button 
+                x:Name="Back"
+                Click="Back_Click"
+                Style="{StaticResource BtnEx}"
+                Width="150"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="10 0 0 20" Cursor="Hand">
+                <TextBlock Text="Назад" FontSize="25" Style="{StaticResource MText}"/>
+            </Button>
+            <Border x:Name="BenchHor" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/BeanchH.png"
+                       Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Text="Примите положение лежа, ноги немного расставьте,делая упор на пятки, но не отрывая носков стоп от поверхности пола. Теперь сведите лопатки вместе, затылок, плечи и ягодицы прижмите к скамье." Style="{StaticResource BordTxt}"/>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="BenchVert" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/BenchVert.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 10 0 0" Text="Для начала установите спинку скамьи под наклоном в 35-40°. Расположитесь на лавке, ноги расставьте, упираясь ступнями ступнями в поверхность пола. Плечи, затылок и бедра должны плотно прилегать к скамье. На задержке дыхания после вдоха опустите штангу к груди, осуществив легкое касание." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="BenchDum" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/BeanchD.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Для начала примите положение лежа. Возьмите спортинвентарь в руки и отводя локтевые суставы в стороны, опустите гантели к груди.Теперь поднимите их вверх, полностью выпрямляя конечности.Выполните  запланированное число подходов и повторений" Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="Push" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/Push.jpeg"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Запрыгните на брусья, удерживая вес тела на практически прямых руках. Сгибая локтевые суставы, опуститесь вниз, пока плечи и поверхность пола не будут параллельны. При выполнении старайтесь максимально сводить лопатки." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border x:Name="hamer" Visibility="Hidden">
+                <Grid>
+                    <Border Style="{StaticResource ImBorder}">
+                        <Image Source="/Images/Hamer.png"
+                        Stretch="Uniform"/>
+                    </Border>
+                    <Border Style="{StaticResource TextBorder}">
+                        <Grid>
+                            <TextBlock Margin="0 20 0 0" Text="Расположитесь на скамье тренажера, спиной прижмитесь к спинке, рукояти при этом должны располагаться на  уровне груди. Следите за тем, чтобы лопатки были не будут параллельны. При выполнении старайтесь сведены вместе. Ногами упритесь в пол." Style="{StaticResource BordTxt}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Page>

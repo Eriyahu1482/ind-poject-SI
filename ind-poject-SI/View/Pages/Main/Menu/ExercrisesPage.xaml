@@ -1,0 +1,62 @@
+﻿<Page x:Class="ind_poject_SI.View.Pages.ExercrisesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ind_poject_SI.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="ExercrisesPage">
+    <Border>
+        <Grid>
+            <Image Source="/Images/Background.jpg"
+               Stretch="UniformToFill"/>
+            <Border Background="White" Opacity="0.5">
+            </Border>
+            <StackPanel Margin="0 10 10 0" Orientation="Vertical" HorizontalAlignment="Right">
+                <TextBlock Text="Группа мышц" Style="{StaticResource ExTxt}"></TextBlock>
+                <Button
+                    x:Name="breast"
+                    Click="breast_Click"
+                    Margin="0 60 0 0"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Грудь" FontSize="25" Style="{StaticResource MText}"/>
+                </Button>
+                <Button
+                    x:Name="Arms"
+                    Click="Arms_Click"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Руки" FontSize="25" Style="{StaticResource MText}"/>
+                </Button>
+                <Button
+                    x:Name="shoulders"
+                    Click="shoulders_Click"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Плечи" FontSize="25" Style="{StaticResource MText}"/>
+                </Button>
+                <Button
+                    x:Name="Legs"
+                    Click="Legs_Click"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Ноги" FontSize="25" Style="{StaticResource MText}"/>
+                </Button>
+                <Button
+                    x:Name="XD"
+                    Click="XD_Click"
+                    Style="{StaticResource BtnEx}">
+                    <TextBlock Text="Специальное" FontSize="25" Style="{StaticResource MText}" Width="185"/>
+                </Button>
+            </StackPanel>
+            <Button 
+                x:Name="Back"
+                Click="Back_Click"
+                Style="{StaticResource BtnEx}"
+                Width="150"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="10 0 0 20">
+                <TextBlock Text="Назад" FontSize="25" Style="{StaticResource MText}"/>
+            </Button>
+        </Grid>
+    </Border>
+</Page>
