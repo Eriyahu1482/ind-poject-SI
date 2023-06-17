@@ -1,29 +1,22 @@
 ﻿using ind_poject_SI.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ind_poject_SI.Model.LiderBord;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ind_poject_SI.View.Pages.Main.Menu
 {
-    /// <summary>
-    /// Логика взаимодействия для LiderPage.xaml
-    /// </summary>
+    LiderContext context;
+    Statistics NewStatistics = new Statistics();
+    Statistics selectedStatiscs = new Statistics();
     public partial class LiderPage : Page
     {
-        public LiderPage()
+        public LiderPage(LiderContext context)
         {
             InitializeComponent();
+            this.context = context;
+            InitializeComponent();
+            GetStatistics();
+            NewStatisticsGrid.DataContext = NewStatistics;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

@@ -36,23 +36,23 @@
                                     Header="ИМЯ" 
                                     Foreground="Black"
                                     FontSize="15"
-                                    Binding="{Binding Users.Login}"/>
+                                    Binding="{Binding Name}"/>
                         <DataGridTextColumn
                                     Width="*"                                  
                                     Header="ЖИМ ЛЁЖА"
-                                    Binding="{Binding Statistics.Press}"
+                                    Binding="{Binding Press}"
                                     Foreground="Black"
                                     FontSize="15"/>
                         <DataGridTextColumn
                                     Width="*"                                  
                                     Header="ПРИСЕДАНИЯ"
-                                    Binding="{Binding Statistics.Squats}"
+                                    Binding="{Binding Squats}"
                                     Foreground="Black"
                                     FontSize="15"/>
                         <DataGridTextColumn
                                     Width="*"                                  
                                     Header="ПОДТЯГИВАНИЯ"
-                                    Binding="{Binding Statistics.Pull-Ups}"
+                                    Binding="{Binding Pull-Ups}"
                                     Foreground="Black"
                                     FontSize="15"/>
                     </DataGrid.Columns>
